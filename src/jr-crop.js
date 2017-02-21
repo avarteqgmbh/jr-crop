@@ -215,8 +215,8 @@ function($ionicModal, $rootScope, $q) {
       var context = canvas.getContext('2d');
 
       // Canvas size is original proportions but scaled down.
-      canvas.width = this.options.width / this.scale;
-      canvas.height = this.options.height / this.scale;
+      canvas.width = this.options.outputWidth / this.scale;
+      canvas.height = this.options.outputHeight / this.scale;
 
       // The full proportions
       var currWidth = this.imgWidth * this.scale;
@@ -224,7 +224,7 @@ function($ionicModal, $rootScope, $q) {
 
       // Because the top/left position doesn't take the scale of the image in
       // we need to correct this value.
-      var correctX = (currWidth - this.imgWidth) / 2;
+      var correctX = ((currWidth - this.imgWidth) / 2) - ((this.options.outputWidth - this.options.width) / 2);
       var correctY = (currHeight - this.imgHeight) / 2;
 
       var sourceX = (this.posX - correctX) / this.scale;
