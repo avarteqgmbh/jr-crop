@@ -92,6 +92,7 @@ Though I'm only supporting iOS, I did get reports that it's working well on Andr
 Open an issue or create a pull request. Please exclude the /dist files from your pull request.
 
 ## Release History
+* 2017-02-21   v1.1.3   Add option to set image output width / height
 * 2015-11-13   v1.1.2   Overwrite the template through options. Documentation on defaultOptions.
 * 2015-11-12   v1.1.1   Circle mask should not be shown by default.
 * 2015-11-12   v1.1.0   Add `circle` option to overlay the image with a circle mask.
